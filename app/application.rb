@@ -12,6 +12,10 @@ class Application
  
       resp.write item.price
       
+    elsif !@@items.include?(item_name)
+      resp.write "We don't have that item"
+      resp.status = 400
+      
     else
       resp.write "Route not found"
       resp.status = 404
