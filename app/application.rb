@@ -12,6 +12,10 @@ class Application
  
       resp.write item.price
       
+    elsif @@items.include?(item_name)
+      resp.write "Route not found"
+      resp.status = 404
+      
     else
       resp.write "Route not found"
       resp.status = 404
