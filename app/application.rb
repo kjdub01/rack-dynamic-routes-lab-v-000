@@ -12,7 +12,7 @@ class Application
  
       resp.write item.price
       
-    elsif @@items.include(item_name) == false
+    elsif @@items.include?(item_name) == false
       resp.write "we don't have that item"
       resp.status = 400
       
